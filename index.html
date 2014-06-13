@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ritual</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="//use.typekit.net/dun7yfl.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+<body>
+  <h1>Ritual</h1>
+  <h2>A new photo every day for your new tab page</h2>
+  <div id="browser">
+    <span class="btn btn-red"></span>
+    <span class="btn btn-orange"></span>
+    <span class="btn btn-green"></span>
+    <div class="browser-chrome">
+      <div class="urlbar"></div>
+    </div>
+    <div class="browser-tab tab-1"></div>
+    <div class="browser-tab tab-2"><div class="photo"></div></div>
+  </div>
+  <a class="download" href="http://bit.ly/ritual-chrome">Download Chrome Extension</a>
+  <script>
+    // Wait a second, then open a new tab
+    setTimeout(function(){
+      var browserEl = document.getElementById('browser');
+      browserEl.setAttribute('class', 'newTab');
+    }, 1000)
+  </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+body {
+  font-family: "brandon-grotesque";
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+}
+h1 {
+  font-size: 100px;
+  margin: 60px 0 10px 0;
+  color: #0a4f3e;
+  line-height: 80px;
+}
+h2 {
+  margin: 0;
+  font-size: 30px;
+  color: #aba;
+  font-weight: 200;
+}
+#browser {
+  max-width: 600px;
+  margin: 0 auto;
+  height: 350px;
+  background: #ccc;
+  border-radius: 4px;
+  margin-top: 40px;
+  position: relative;
+  box-shadow: 0px 15px 35px rgba(0,0,0,0.5);
+}
+.browser-chrome {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: #F0efEf;
+}
+.browser-chrome:before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  border-bottom: 15px solid #F0efEf;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  height: 0;
+  left: 50px;
+  width: 100px;
+}
+.browser-chrome:after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  border-bottom: 15px solid #ccc;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  height: 0;
+  left: 160px;
+  width: 100px;
+  opacity: 0;
+}
+.newTab .browser-chrome:before {
+  border-bottom: 15px solid #ddd;
+}
+.newTab .browser-chrome:after {
+  border-bottom: 15px solid #F0efEf;
+  -webkit-animation: tabIn 0.25s;
+  opacity: 1;
+}
+@-webkit-keyframes tabIn {
+  0% { opacity: 0; top: -5px; }
+  1000% { opaicty: 1; top: -15px; }
+}
+.btn {
+  position: absolute;
+  top: 5px;
+  border-radius: 100%;
+  width: 9px;
+  height: 9px;
+  display: inline-block;
+  background: green;
+}
+.btn-red {
+  left: 5px;
+  background: red;
+}
+.btn-orange {
+  left: 18px;
+  background: orange;
+}
+.btn-green {
+  left: 31px;
+  background: green;
+}
+.urlbar {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 4px;
+  background: #fff;
+  border: 2px solid #fff;
+}
+.newTab .urlbar {
+  border: 2px solid #2AE3F7;
+}
+.browser-tab {
+  position: absolute;
+  top: 51px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0 0 4px 4px;
+}
+.tab-1 {
+  background: #ccc;
+}
+.tab-2 {
+  display: none;
+}
+.newTab .tab-2 {
+  display: block;
+  background: #fff;
+}
+.photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('photo.png');
+  background-size: cover;
+  border-radius: 0 0 4px 4px;
+  -webkit-animation: fadeIn 1.2s .25s;
+}
+@-webkit-keyframes fadeIn {
+  0%   { opacity: 0;}
+  100% { opacity: 1;}
+}
+.download {
+  margin-top: 60px;
+  display: inline-block;
+  background: #1C8581;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 15px 25px;
+  font-size: 22px;
+  border-radius: 4px;
+}
